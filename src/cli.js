@@ -29,6 +29,14 @@ program.version(
 );
 
 program
+  .command('team <name>')
+  .alias('t')
+  .option('-i info', "Retrieve the team's information")
+  .action(name =>  {
+    nbaGo.teamDataTest(name);
+  });
+
+program
   .command('player <name>')
   .alias('p')
   .option('-i, --info', "Check the player's basic information")
