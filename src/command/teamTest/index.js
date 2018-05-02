@@ -15,9 +15,9 @@ import { basicTable } from '../../utils/table';
 const teamDataTest = async teamName => {
 	// await NBA.updateTeams();
 
-	team = teamName.teamIDFromName(teamName);
+	teamID = teamIDFromName(teamName);
 	const teamInfo = await getTeamInfo(teamName);
-	teamStats = getTeamDashBoardData()
+	teamStats = getTeamDashBoardData(teamName);
 	
 
 const createTeamStatsColumns = (
